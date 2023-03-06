@@ -4,9 +4,9 @@ get("/users", { :controller => "users", :action => "index" })
 
 get("/photos", { :controller => "photos", :action => "index" })
 
-get("/users/:userid", { :controller => "users", :action => "profile" })
+get("/users/:path_username", { :controller => "users", :action => "show" })
 
-get("/photos/:photoid", { :controller => "photos", :action => "profile" })
+get("/photos/:path_photo", { :controller => "photos", :action => "show" })
 
 
 end
