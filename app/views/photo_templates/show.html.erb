@@ -2,20 +2,25 @@
 
 <dl>
   <dt>Image</dt>
-  <dd></dd>
+  <dd><img src="<%= @the_photo.image %>"</dd>
 
   <dt>Caption</dt>
-  <dd></dd>
+  <dd><%= @the_photo.caption %></dd>
   
   <dt>Owner</dt>
-  <dd></dd>
+  <dd><%= @the_photo.poster.username %></dd>
 
   <dt>Post date</dt>
-  <dd></dd>
+  <dd><%= @the_photo.created_at %></dd>
+
+    <dt>Edit photo</dt>
+  <dd>form</dd>
+
+  <dt>Delete photo</dt>
+  <dd><a href="/delete_photo/<%= @the_photo.id %>">Delete this photo</a></dd>
 
 </dl>
 
-form
 
 <h1>Comments</h2>
 
@@ -48,4 +53,3 @@ form
   <h2>Add a new comment</h2>
 
   form
-  
