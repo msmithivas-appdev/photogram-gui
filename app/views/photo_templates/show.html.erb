@@ -1,0 +1,51 @@
+<h1>Photo Details </h1>
+
+<dl>
+  <dt>Image</dt>
+  <dd></dd>
+
+  <dt>Caption</dt>
+  <dd></dd>
+  
+  <dt>Owner</dt>
+  <dd></dd>
+
+  <dt>Post date</dt>
+  <dd></dd>
+
+</dl>
+
+form
+
+<h1>Comments</h2>
+
+
+
+<table border="1">
+
+<tr>
+    <th>Commenter</th>
+    <th>Comment</th>
+    <th>Posted</th>
+    
+  </tr>
+
+  <% if false %>
+  
+  @something each do |a_photo|
+    <tr>
+      <td><img src="<%= a_photo.image %>"></td>
+      <td><%= a_photo.poster.username %></td>
+      <td><%= a_photo.caption %></td>
+      <td><%= a_photo.created_at %></td>
+      <td><a href="/photos/<%= a_photo.id %>">Show details</a></td>
+    </tr>
+  <% end %>
+
+
+</table>
+
+  <h2>Add a new comment</h2>
+
+  form
+  
