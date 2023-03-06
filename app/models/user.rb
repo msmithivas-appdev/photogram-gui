@@ -166,4 +166,8 @@ class User < ApplicationRecord
 
     return matching_photos
   end
+
+
+
+  
 end
