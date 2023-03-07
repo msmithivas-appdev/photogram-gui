@@ -23,7 +23,7 @@
     <th>Show details</th>
   </tr>
 
-   <% @the_user.own_photos each do |a_photo| %>
+   <% @the_user.own_photos.each do |a_photo| %>
     <tr>
       <td><img src="<%= a_photo.image %>"></td>
       <td><%= a_photo.poster.username %></td>

@@ -10,16 +10,14 @@ class PhotosController < ApplicationController
   def show
 
     @url_photo = params.fetch("path_photo")
-    matching_photos = Photo.where({ :id => url_photo })
+    matching_photos = Photo.where({ :id => @url_photo })
     @the_photo = matching_photos.at(0)
 
-    # matching_comments = Comment.all
-    # @list_of_comments = matching_comments
 
     if @the_photo == nil
       redirect_to("/404")
     else
-      render({ :template => "user_templates/show.html.erb "})
+      render({ :template => "photo_templates/show.html.erb" })
     end
 
   end 
@@ -30,8 +28,8 @@ class PhotosController < ApplicationController
       the_photo = matching_photos.at(0)
       the_photo.destroy
 
-      redirect_to("/")
-     # render({ :template => "photo_templates/delete.html.erb "})
+      redirect_to("/photos")
+     # render({ :template => "photo_templates/delete.html.erb"})
   end
 
   def add
@@ -51,4 +49,20 @@ class PhotosController < ApplicationController
    
   end
 
+
+  def edit
+    the_id = params.fetch("path_photo")
+    the_caption = params.fetch("caption")
+    the_image = params.fetch("image")
+
+    
+    edit_photo = Photo.where({ :id => the_id }).at(0)
+    edit_photo.image = the_image
+    edit_photo.caption = the_caption
+    edit_photo.save
+
+
+    redirect_to("/photos" + edit_photo.id.to_s)
+   
+  end
 end

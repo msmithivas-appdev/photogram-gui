@@ -12,5 +12,6 @@ get("/delete_photo/:path_photo", { :controller => "photos", :action => "delete" 
 
 get("/add_photo", { :controller => "photos", :action => "add" })
 
+get("/edit_photo/:path_photo", { :controller => "photos", :action => "edit" })
 
 end
