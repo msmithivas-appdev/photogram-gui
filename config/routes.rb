@@ -10,5 +10,7 @@ get("/photos/:path_photo", { :controller => "photos", :action => "show" })
 
 get("/delete_photo/:path_photo", { :controller => "photos", :action => "delete" })
 
+get("/add_photo", { :controller => "photos", :action => "add" })
+
 
 end

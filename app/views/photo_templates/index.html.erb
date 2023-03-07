@@ -1,6 +1,17 @@
 <h1>List of photos</h1>
 
-form 
+<form action="/add_photo">
+  <label for="alpha">Image</label>
+  <input id="alpha" type="text" name="image" value="Enter a URL for the image">
+
+  <label for="beta">Caption</label>
+  <textarea id="beta" type="text" name="caption" value="Enter a caption for the photo"></textarea>
+
+  <label for="gamma">Owner ID</label>
+  <input id="gamma" type="integer" name="owner_id" value="Enter an ID of a user">
+
+  <button>Add photo</button>
+</form>
 
 
 <table border="1">
