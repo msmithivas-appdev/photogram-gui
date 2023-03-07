@@ -14,7 +14,10 @@
   <dd><%= @the_photo.created_at %></dd>
 
     <dt>Edit photo</dt>
-  <dd>form</dd>
+  <form>
+  <label for="zebra">Fan</label>
+  <input id="zebra" type="text" name="qs_fan_id">
+  </form>
 
   <dt>Delete photo</dt>
   <dd><a href="/delete_photo/<%= @the_photo.id %>">Delete this photo</a></dd>
@@ -22,34 +25,35 @@
 </dl>
 
 
-<h1>Comments</h2>
-
+<h2>Comments</h2>
 
 
 <table border="1">
 
-<tr>
+  <tr>
     <th>Commenter</th>
     <th>Comment</th>
     <th>Posted</th>
     
   </tr>
 
-  <% if false %>
+
+  @list_of_comments = @the_photo.comments
   
-  @something each do |a_photo|
+  <%  @list_of_comments.each do |a_comment| %>
     <tr>
-      <td><img src="<%= a_photo.image %>"></td>
-      <td><%= a_photo.poster.username %></td>
-      <td><%= a_photo.caption %></td>
-      <td><%= a_photo.created_at %></td>
-      <td><a href="/photos/<%= a_photo.id %>">Show details</a></td>
+      <td><%= a.comment.commenter.username %></td>
+      <td><%= a.comment.body %></td>
+      <td><%= a.comment.created_at %></td>
     </tr>
   <% end %>
 
 
 </table>
 
-  <h2>Add a new comment</h2>
+  <h3>Add a new comment</h3>
 
-  form
+  <form>
+  <label for="zebra">Fan</label>
+  <input id="zebra" type="text" name="qs_fan_id">
+  </form>
