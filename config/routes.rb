@@ -19,4 +19,6 @@ get("/insert_comment_record", { :controller => "photos", :action => "add_comment
 
 get("/insert_user_record", { :controller => "users", :action => "add_user" })
 
+get("/edit_username/:path_username", { :controller => "users", :action => "update_username" })
+
 end
